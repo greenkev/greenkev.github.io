@@ -25,14 +25,35 @@ import os
 import re
 
 #todo: incorporate different collection types rather than a catch all publications, requires other changes to template
+
+BOLDED_AUTHOR_FIRST_NAME = "Kevin"
+BOLDED_AUTHOR_LAST_NAME = "green"
+
+HACK_SEPERATION_STRING = "}\n\n@"
+
+
 publist = {
-    "proceeding": {
-        "file" : "../files/bibtex/ICRA_2020.bib",
-        "venuekey": "booktitle",
-        "venue-pretext": "In the proceedings of ",
+    "article": {
+        "file" : "KevinGreenPapers.bib",
+        "venuekey": "journal",
+        "venue-pretext": "",
         "collection" : {"name":"publications",
                         "permalink":"/publication/"}
         
+    },
+    "inproceedings":{
+        "file": "KevinGreenPapers.bib",
+        "venuekey" : "booktitle",
+        "venue-pretext" : "",
+        "collection" : {"name":"publications",
+                        "permalink":"/publication/"}
+    },
+    "patent":{
+        "file": "KevinGreenPapers.bib",
+        "venuekey" : "number",
+        "venue-pretext" : "",
+        "collection" : {"name":"publications",
+                        "permalink":"/publication/"}
     }
 }
 
@@ -48,12 +69,23 @@ def html_escape(text):
 
 
 for pubsource in publist:
+    print(publist[pubsource]["file"])
     parser = bibtex.Parser()
     bibdata = parser.parse_file(publist[pubsource]["file"])
+
+    # Seperate bibtex entried
+    raw_bibtex = bibdata.to_string('bibtex')
+    seperated_raw_bibtex = []
+    start_idx = 1
+    while start_idx > 0:
+        curr_idx = raw_bibtex.find(HACK_SEPERATION_STRING, start_idx)
+        seperated_raw_bibtex.append(raw_bibtex[start_idx:curr_idx+1])
+        start_idx = curr_idx + 1
 
     #loop through the individual references in a given bibtex file
     for bib_id in bibdata.entries:
         #reset default date
+
         pub_year = "1900"
         pub_month = "01"
         pub_day = "01"
@@ -84,6 +116,7 @@ for pubsource in publist:
 
             url_slug = re.sub("\\[.*\\]|[^a-zA-Z0-9_-]", "", clean_title)
             url_slug = url_slug.replace("--","-")
+            url_slug = url_slug[0:100] # Keep url from being too long
 
             md_filename = (str(pub_date) + "-" + url_slug + ".md").replace("--","-")
             html_filename = (str(pub_date) + "-" + url_slug).replace("--","-")
@@ -93,7 +126,11 @@ for pubsource in publist:
 
             #citation authors - todo - add highlighting for primary author?
             for author in bibdata.entries[bib_id].persons["author"]:
-                citation = citation+" "+author.first_names[0]+" "+author.last_names[0]+", "
+                if author.first_names[0].lower() == BOLDED_AUTHOR_FIRST_NAME.lower() and \
+                   author.last_names[0].lower() == BOLDED_AUTHOR_LAST_NAME.lower():
+                    citation = citation+" <b>"+author.first_names[0]+" "+author.last_names[0]+"</b>, "
+                else:
+                    citation = citation+" "+author.first_names[0]+" "+author.last_names[0]+", "
 
             #citation title
             citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
