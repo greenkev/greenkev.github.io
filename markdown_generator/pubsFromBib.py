@@ -69,7 +69,7 @@ def html_escape(text):
 
 
 for pubsource in publist:
-    print(publist[pubsource]["file"])
+    # print(publist[pubsource])
     parser = bibtex.Parser()
     bibdata = parser.parse_file(publist[pubsource]["file"])
 
@@ -166,6 +166,9 @@ for pubsource in publist:
                     url = True
 
             md += "\ncitation: '" + html_escape(citation) + "'"
+
+            # Add publication_type
+            md += "\npublication_type: '" + html_escape(bibdata.entries[bib_id].type) + "'"
 
             md += "\n---"
 

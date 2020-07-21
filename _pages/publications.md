@@ -11,6 +11,18 @@ author_profile: true
 
 {% include base_path %}
 
+
+
 {% for post in site.publications reversed %}
-  {% include archive-single.html %}
+  {%if post.publication_type == 'inproceedings' or post.publication_type == 'article'%}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
+
+<h1> Patents </h1>
+
+{% for post in site.publications reversed %}
+  {%if post.publication_type == 'patent' %}
+    {% include archive-single.html %}
+  {% endif %}
 {% endfor %}
