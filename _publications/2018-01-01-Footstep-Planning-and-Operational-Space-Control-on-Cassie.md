@@ -7,6 +7,7 @@ date: 2018-01-01
 venue: 'Dynamic Walking Meeting'
 paperurl: 'https://youtu.be/Cirjk-hXFH4'
 citation: ' <b>Kevin Green</b>,  Taylor Apgar,  Jonathan Hurst, &quot;Footstep Planning and Operational Space Control on Cassie.&quot; Dynamic Walking Meeting, 2018.'
+publication_type: 'inproceedings'
 ---
 Oral Presentation
 
