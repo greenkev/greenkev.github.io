@@ -12,17 +12,26 @@ author_profile: true
 {% include base_path %}
 
 
+<h2 class="archive__item-title"> Peer-Reviewed Journal Papers </h2>
 
 {% for post in site.publications reversed %}
-  {%if post.publication_type == 'inproceedings' or post.publication_type == 'article'%}
-    {% include archive-single.html %}
+  {%if post.publication_type == 'article'%}
+    {% include archive-single-publication.html %}
   {% endif %}
 {% endfor %}
 
-<h1> Patents </h1>
+<h2 class="archive__item-title"> Peer-Reviewed Conference Papers </h2>
+
+{% for post in site.publications reversed %}
+  {%if post.publication_type == 'inproceedings'%}
+    {% include archive-single-publication.html %}
+  {% endif %}
+{% endfor %}
+
+<h2 class="archive__item-title"> Patents </h2>
 
 {% for post in site.publications reversed %}
   {%if post.publication_type == 'patent' %}
-    {% include archive-single.html %}
+    {% include archive-single-publication.html %}
   {% endif %}
 {% endfor %}
