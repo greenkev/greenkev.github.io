@@ -75,6 +75,7 @@ for pubsource in publist:
 
     # Seperate bibtex entried
     raw_bibtex = bibdata.to_string('bibtex')
+    # print(raw_bibtex)
     seperated_raw_bibtex = []
     start_idx = 1
     while start_idx > 0:
@@ -119,6 +120,9 @@ for pubsource in publist:
             url_slug = url_slug[0:100] # Keep url from being too long
 
             md_filename = (str(pub_date) + "-" + url_slug + ".md").replace("--","-")
+            md_filename = os.path.basename(md_filename)
+            bib_filename = md_filename[0:-3]+".bib"
+
             html_filename = (str(pub_date) + "-" + url_slug).replace("--","-")
 
             #Build Citation from text
@@ -155,7 +159,7 @@ for pubsource in publist:
                     md += "\nexcerpt: '" + html_escape(b["note"]) + "'"
                     note = True
 
-            md += "\ndate: " + str(pub_date) 
+            md += "\ndate: " + str(pub_date)
 
             md += "\nvenue: '" + html_escape(venue) + "'"
             
@@ -170,22 +174,39 @@ for pubsource in publist:
             # Add publication_type
             md += "\npublication_type: '" + html_escape(bibdata.entries[bib_id].type) + "'"
 
+            # add presentation video url if it exists (no url )
+            if 'preprint_url' in b.keys():
+                if len(str(b["preprint_url"])) > 5:
+                    md += "\npreprint: '" + b['preprint_url'] + "'"
+
+            if 'presentation_video_url' in b.keys():
+                if len(str(b["presentation_video_url"])) > 5:
+                    md += "\npresentation_video_url: '" + b['presentation_video_url'] + "'"
+
+            if 'attached_video_url' in b.keys():
+                if len(str(b["attached_video_url"])) > 5:
+                    md += "\nattached_video_url: '" + b['attached_video_url'] + "'"
+
+            md += "\nbib_file_name: '" + bib_filename + "'"
+
             md += "\n---"
+
 
             
             ## Markdown description for individual page
             if note:
                 md += "\n" + html_escape(b["note"]) + "\n"
 
-            if url:
-                md += "\n[Access paper here](" + b["url"] + "){:target=\"_blank\"}\n" 
-            else:
-                md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
-
-            md_filename = os.path.basename(md_filename)
+            # if url:
+            #     md += "\n[Access paper here](" + b["url"] + "){:target=\"_blank\"}\n" 
+            # else:
+            #     md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
 
             with open("../_publications/" + md_filename, 'w', encoding="utf-8") as f:
                 f.write(md)
+            with open("../files/individualBib/" + bib_filename, 'w') as f:
+                f.write(seperated_raw_bibtex[bibdata.entries.order.index(bib_id)])
+                
             print(f'SUCESSFULLY PARSED {bib_id}: \"', b["title"][:60],"..."*(len(b['title'])>60),"\"")
         # field may not exist for a reference
         except KeyError as e:

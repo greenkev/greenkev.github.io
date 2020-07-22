@@ -1,0 +1,78 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+
+    <p style="margin:0">
+      {% if post.authors %}
+      {{ post.authors }},
+      {% endif %}
+       "{{ post.title }}," {{ post.venue }},
+      {% if post.vol %}
+      vol. {{ post.vol }},
+      {% endif %}
+      {% if post.no %}
+       no. {{ post.no }},
+      {% endif %}
+      {% if post.pages %}
+       pp. {{ post.pages }},
+      {% endif %}
+      {{ post.year }}.
+    </p>
+    <p style="margin:0">
+      {% if post.preprint %}
+      [<a href="{{ post.preprint }}">preprint</a>]
+      {% endif %}
+      {% if post.techreport %}
+      [<a href="{{ post.techreport }}">tech-report</a>]
+      {% endif %}
+      {% if post.video %}
+      [<a href="{{ post.video }}">video</a>]
+      {% endif %}
+      [<button type="button" class="collapsibleBib">bibtex</button>]
+      [<button type="button" class="collapsible">abstract</button>]
+    </p>
+    <div class="mycontent" style="border-radius:3px">
+      <pre class="bibtext" style="font-size:80%;">{{ post.abstract }}</pre>
+    </div>
+    <div class="mybib" style="background-color: #f1f1f1;border-radius:3px 3px 0 0;font-size:80%;" id="{{ post.permalink }}">
+      {% include {{ post.bibhtml }} %}
+    </div>
+    <div class="mybib" style="width:100%;background-color: #b4b4b4;margin:0;border-radius:0 0 3px 3px;">
+      <div class="mybuttons">
+        <a class="mylink" href='{{ post.biblink }}' download>
+          <img class="myimg" src="/images/download.png" alt="Download .txt" style="height:20px">
+        </a>
+      </div>
+      <button onclick="copyToClipboard('{{ post.permalink }}')" class="mybuttons">
+        <img src="/images/copy.png" alt="Copy" style="height:20px;margin:auto;">
+      </button>
+    </div>
+    {% if post.read_time %}
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% endif %}
+  </article>
+</div>
