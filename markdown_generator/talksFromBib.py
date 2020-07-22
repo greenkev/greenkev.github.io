@@ -26,7 +26,7 @@ import re
 
 #todo: incorporate different collection types rather than a catch all publications, requires other changes to template
 
-BOLDED_AUTHOR_FIRST_NAME = "kevin"
+BOLDED_AUTHOR_FIRST_NAME = "Kevin"
 BOLDED_AUTHOR_LAST_NAME = "green"
 
 HACK_SEPERATION_STRING = "}\n\n@"
@@ -147,7 +147,10 @@ for pubsource in publist:
             citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
 
             #add venue logic depending on citation type
-            venue = publist[pubsource]["venue-pretext"]+b[publist[pubsource]["venuekey"]].replace("{", "").replace("}","").replace("\\","")
+            if 'booktitle' in b.keys():
+                venue = b['booktitle']
+            else:
+                venue = publist[pubsource]["venue-pretext"]+b[publist[pubsource]["venuekey"]].replace("{", "").replace("}","").replace("\\","")
 
             citation = citation + " " + html_escape(venue)
             citation = citation + ", " + pub_year + "."
@@ -194,6 +197,10 @@ for pubsource in publist:
                 if len(str(b["attached_video_url"])) > 5:
                     md += "\nattached_video_url: '" + b['attached_video_url'] + "'"
 
+            if 'booktitle' in b.keys():
+                if len(str(b["booktitle"])) > 5:
+                    md += "\nbooktitle: '" + b['booktitle'] + "'"
+
             md += "\nbib_file_name: '" + bib_filename + "'"
 
             md += "\n---"
@@ -208,11 +215,11 @@ for pubsource in publist:
             #     md += "\n[Access paper here](" + b["url"] + "){:target=\"_blank\"}\n" 
             # else:
             #     md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
-
-            with open("../_publications/" + md_filename, 'w', encoding="utf-8") as f:
-                f.write(md)
-            with open("../files/individualBib/" + bib_filename, 'w') as f:
-                f.write(seperated_raw_bibtex[bibdata.entries.order.index(bib_id)])
+            if bibdata.entries[bib_id].type == 'misc':
+                with open("../_talks/" + md_filename, 'w') as f:
+                    f.write(md)
+                with open("../files/individualBib/" + bib_filename, 'w') as f:
+                    f.write(seperated_raw_bibtex[bibdata.entries.order.index(bib_id)])
                 
             print(f'SUCESSFULLY PARSED {bib_id}: \"', b["title"][:60],"..."*(len(b['title'])>60),"\"")
         # field may not exist for a reference
