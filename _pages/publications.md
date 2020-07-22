@@ -11,6 +11,18 @@ author_profile: true
 
 {% include base_path %}
 
+{% for post in site.publications reversed %}
+  {%if post.publication_type == 'inbook'%}
+<h2 class="archive__item-title"> Book Chapters </h2>
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% for post in site.publications reversed %}
+  {%if post.publication_type == 'inbook'%}
+    {% include archive-single-publication.html %}
+  {% endif %}
+{% endfor %}
+
 
 <h2 class="archive__item-title"> Peer-Reviewed Journal Papers </h2>
 
