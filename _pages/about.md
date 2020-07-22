@@ -21,7 +21,7 @@ Some of the models I contributed to are now sold through a University of Michiga
 I am originally from Saint Joseph, Michigan. 
 I received my B.S.E in Mechanical Engineering, Summa Cum Laude, from the University of Michigan in 2017.
 Outside of academic research labs, I interned at Whirlpool Corp. and [Jenesis International](https://www.jenesisinc.com/).
-At Whirlpool I worked in Computer-Aided Engineering performing test analysis and model correlation on vertical axis washing machines one summer as well as in Advanced Development on dishwasher dry systems.
+At Whirlpool I worked in Computer-Aided Engineering performing test analysis and model correlation on vertical axis washing machines as well as in Advanced Development on dishwasher dry systems.
 At Jenesis International I worked on several different projects designing, prototyping and testing LED products.
 
 More information of my current and previous work can be found on the projects page. 
