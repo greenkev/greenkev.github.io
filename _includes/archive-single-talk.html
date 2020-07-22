@@ -25,18 +25,31 @@
           alt="">
       </div>
     {% endif %}
-    <h2 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
-    </h2>
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% if post.citation %}
+      <p style="margin:0">{{ post.citation }} </p>
     {% endif %}
-    {% if post.date %}<p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>{% endif %}
-    {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>{% endif %}
+
+    <p style="margin:0">
+      {% if post.preprint %}
+      [<a href="{{ post.preprint }}">Preprint</a>]
+      {% endif %}
+      {% if post.paperurl %}
+      [<a href="{{ post.paperurl }}">Publication</a>]
+      {% endif %}
+      {% if post.techreport %}
+      [<a href="{{ post.techreport }}">tech-report</a>]
+      {% endif %}
+      {% if post.attached_video_url %}
+      [<a href="{{ post.attached_video_url }}">Supplemental Video</a>]
+      {% endif %}
+      {% if post.presentation_video_url %}
+      [<a href="{{ post.presentation_video_url }}">Presentation Video</a>]
+      {% endif %}
+      {% if post.bib_file_name %}
+      [<a href="/files/individualBib/{{ post.bib_file_name }}">Bibtex</a>]
+      {% endif %}
+      <!-- [<button type="button" class="collapsibleBib">bibtex</button>]
+      [<button type="button" class="collapsible">abstract</button>] -->
+    </p>
   </article>
 </div>
