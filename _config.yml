@@ -181,7 +181,7 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
+  projects:
     output: true
     permalink: /:collection/:path/
   talks:
@@ -230,6 +230,15 @@ defaults:
   # _portfolio
   - scope:
       path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _portfolio
+  - scope:
+      path: ""
       type: portfolio
     values:
       layout: single
@@ -265,6 +274,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-pdf-embed
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
