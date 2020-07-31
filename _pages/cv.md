@@ -10,4 +10,3 @@ redirect_from:
 {% include base_path %}
 
 {% pdf "/files/pdf/KevinGreenCV.pdf" %}
-
