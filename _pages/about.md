@@ -8,13 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student in Robotics at Oregon State University, advised by [Jonathan Hurst](https://mime.oregonstate.edu/people/hurst) and [Ross L. Hatton](http://www.rosslhatton.com/). 
+I am a PhD student in Robotics at Oregon State University, advised by [Dr. Jonathan Hurst](https://mime.oregonstate.edu/people/hurst) and [Dr. Ross L. Hatton](http://www.rosslhatton.com/). 
 I am a member of the [Dynamic Robotics Lab](https://mime.oregonstate.edu/research/drl/) where I study modeling, control and motion planning as applied to legged robots. My research generally focuses on robust and agile bipedal locomotion, particularly applied to Agility Robotics' Cassie Robot.
 I am currently working on methods that combine the power of deep learning, observed principles of legged locomotion from biologists and knowledge of the physics of locomotion.
 
-During my undergrad I worked as a research assistant in [C. David Remy's](https://www.uni-stuttgart.de/en/press/experts/Prof.-Dr.-C.-David-Remy) RAMlab (Robotics and Motion Laboratory) where I worked with RAMone, a series elastic planar biped designed to study efficient locomotion.
+During my undergrad I worked as a research assistant in [Dr. C. David Remy's](https://www.uni-stuttgart.de/en/press/experts/Prof.-Dr.-C.-David-Remy) RAMlab (Robotics and Motion Laboratory) where I worked with RAMone, a series elastic planar biped designed to study efficient locomotion.
 
-I also worked as a research assistant in a lab group lead by [Glenn Green](https://medicine.umich.edu/dept/otolaryngology/glenn-e-green-md) and [David Zopf](https://medicine.umich.edu/dept/otolaryngology/david-zopf-md-ms) in the University of Michigan Medical School's Department of Otolaryngology-Head and Neck Surgery.
+I also worked as a research assistant in a lab group lead by [Dr. Glenn Green, M.D.,](https://medicine.umich.edu/dept/otolaryngology/glenn-e-green-md) and [Dr. David Zopf, M.D.,](https://medicine.umich.edu/dept/otolaryngology/david-zopf-md-ms) in the University of Michigan Medical School's Department of Otolaryngology-Head and Neck Surgery.
 In this research I primarily worked on creation of patient specific surgical reference models and high fidelity surgical training models for pediatric procedures. 
 Some of the models I contributed to are now sold through a University of Michigan startup, [Make Medical](https://www.makemedical.net/).
 
