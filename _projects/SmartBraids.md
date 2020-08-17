@@ -14,4 +14,10 @@ Pneumatic artificial muscles work a lot like the classic finger trap toy. They c
 
 I personally contributed by developing a customizable jig (picture below) to manufacture prototypes of the smart braids so that we could experiment with wire wrap patterns, wire sizes and wire materials. It was important to create consistent, uniform helical weaves so that the models of the inductive sensor could be correlated to hardware data. The jig I designed consisted of four 3D printed parts that surround a wooden dowel. The jig has guides and ramps to remind the user of the weave order. Once wrapping is complete the smart braid and 3D printed parts are slid off of the dowel, then the guide can be disassembled and removed piece by piece through the hole left by the dowel.  
 
-<!-- [Picture of jig in CAD and photo of real jig] -->
+<video  style="display:block; width:100%; height:auto;" autoplay controls loop="loop">
+    <source src="{{ site.baseurl }}/media/smartBraids/SmartBraidGuide.mp4" type="video/mp4" />
+    <source src="{{ site.baseurl }}/media/smartBraids/SmartBraidGuide.ogv" type="video/ogg" />
+    <source src="{{ site.baseurl }}/media/smartBraids/SmartBraidGuide.webm" type="video/webm" />
+</video>
+
+<!-- [Picture of jig in CAD] -->
