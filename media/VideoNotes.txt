@@ -1,0 +1,21 @@
+Note to self for setting up videos to embed using ffmpeg. These commands are 
+probably not ideal but I think they worked for this one case.
+
+3 formats: MP4, webm and OGV
+
+mp4
+ffmpeg -y -i image84.gif -r 16 -cpu-used 0 -pix_fmt yuv420p -movflags faststart -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" test.mp4
+
+webm
+ffmpeg -y -i image84.gif -r 16 -c:v libvpx -quality good -cpu-used 0 -b:v 500K -crf 12 -pix_fmt yuv420p -movflags faststart test.webm
+
+ogv
+ffmpeg -y -i image84.gif -r 16 -cpu-used 0 -pix_fmt yuv420p -movflags faststart -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" test.ogv
+
+HTML Embedding 
+
+<video  style="display:block; width:100%; height:auto;" autoplay controls loop="loop">
+    <source src="{{ site.baseurl }}/media/smartBraids/SmartBraidGuide.mp4" type="video/mp4" />
+    <source src="{{ site.baseurl }}/media/smartBraids/SmartBraidGuide.ogv" type="video/ogg" />
+    <source src="{{ site.baseurl }}/media/smartBraids/SmartBraidGuide.webm" type="video/webm" />
+</video>
