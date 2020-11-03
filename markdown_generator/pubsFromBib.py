@@ -55,9 +55,16 @@ publist = {
         "collection" : {"name":"publications",
                         "permalink":"/publication/"}
     },
-    "misc":{
+    "inbook":{
         "file": "KevinGreenPapers.bib",
         "venuekey" : "number",
+        "venue-pretext" : "",
+        "collection" : {"name":"publications",
+                        "permalink":"/publication/"}
+    },
+    "misc":{
+        "file": "KevinGreenPapers.bib",
+        "venuekey" : "bookTitle",
         "venue-pretext" : "",
         "collection" : {"name":"publications",
                         "permalink":"/publication/"}
@@ -101,6 +108,8 @@ for pubsource in publist:
         b = bibdata.entries[bib_id].fields
         
         try:
+            if pubsource != "misc" and bibdata.entries[bib_id].type != pubsource:
+                continue
             pub_year = f'{b["year"]}'
 
             #todo: this hack for month and day needs some cleanup
@@ -137,11 +146,17 @@ for pubsource in publist:
 
             #citation authors - todo - add highlighting for primary author?
             for author in bibdata.entries[bib_id].persons["author"]:
+                if len(author.middle_names) == 0:
+                    name = "".join(author.first_names) + " " + "".join(author.last_names)
+                else:
+                    name = "".join(author.first_names) + " " + "".join(author.middle_names) + " " + "".join(author.last_names)
+                        
+                print(name)
                 if author.first_names[0].lower() == BOLDED_AUTHOR_FIRST_NAME.lower() and \
                    author.last_names[0].lower() == BOLDED_AUTHOR_LAST_NAME.lower():
-                    citation = citation+" <b>"+author.first_names[0]+" "+author.last_names[0]+"</b>, "
+                    citation = citation+" <b>"+name+"</b>, "
                 else:
-                    citation = citation+" "+author.first_names[0]+" "+author.last_names[0]+", "
+                    citation = citation+" "+ name +", "
 
             #citation title
             citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
@@ -212,7 +227,7 @@ for pubsource in publist:
             with open("../_publications/" + md_filename, 'w') as f:
                 f.write(md)
             with open("../files/individualBib/" + bib_filename, 'w') as f:
-                f.write(seperated_raw_bibtex[bibdata.entries.order.index(bib_id)])
+                f.write(seperated_raw_bibtex[list(bibdata.entries.keys()).index(bib_id)])
                 
             print(f'SUCESSFULLY PARSED {bib_id}: \"', b["title"][:60],"..."*(len(b['title'])>60),"\"")
         # field may not exist for a reference
