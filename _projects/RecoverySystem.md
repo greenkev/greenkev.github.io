@@ -34,23 +34,21 @@ We use a relative simple control method for this system. We command a velocity t
 
 <img src='/images/forcecontrol.png' height="50%" width="50%">
 
-We feed forward the vertical velocity of the robot measured from the linear encoder on the slider, then we use porportional feedback between the desired vertical force and the filtered measured force from the load cell.
+We feed forward the vertical velocity of the robot measured from the linear encoder on the slider, then we use proportional feedback between the desired vertical force and the filtered measured force from the load cell.
 
 __3. Recovery Mode__
 
-In this mode the robot has started to fall and needs assistance to avoid damage. When a fall is detected the system should quickly lift the robot up to prevent the legs or body from striking the ground. We generate a trajectory to lift the robot up to a safe height using a saturated second order setpoint filter, shown below. When we detect a fall, we initialize the setpoint filter's internal state to match the current measured position and velocity of the robot. Then we set the input, goal position, to be a predefined, constant safe holding height. The saturations are required because we want to ensure limit the maxium speed and acceleration of the robot as it is lifted.
+In this mode the robot has started to fall and needs assistance to avoid damage. When a fall is detected the system should quickly lift the robot up to prevent the legs or body from striking the ground. We generate a trajectory to lift the robot up to a safe height using a saturated second order setpoint filter, shown below. When we detect a fall, we initialize the setpoint filter's internal state to match the current measured position and velocity of the robot. Then we set the input, goal position, to be a predefined, constant safe holding height. The saturations are required because we want to limit the maximum speed and acceleration of the robot as it is lifted.
 
 <img src='/images/setpointfilter.png'>
 
-This filter outputs a velocity and a position which we servo on using a porportional plus feedforward controller.
+This filter outputs a velocity and a position which we servo on using a proportional plus feedforward controller.
 
 <img src='/images/recoveryControl.png' height="50%" width="50%">
 
 The plot below shows data from a failure and catch.
 
 <img src='/images/recoveryplot.png'>
-
-
 
 
 
