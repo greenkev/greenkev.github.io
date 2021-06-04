@@ -27,6 +27,12 @@ When you are initially working your website, it is very useful to be able to pre
 1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
 1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
 
+## Autogenerating Publication and Talks Markdown
+1. Add items to "markdown_generator/KevinGreenPapers.bib"
+1. Navigate to markdown_generator/ in a terminal
+1. run 'python pubsFromBib.py'
+1. run 'python talksFromBib.py'
+
 
 # Maintenance 
 
