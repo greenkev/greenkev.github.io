@@ -219,7 +219,7 @@ for pubsource in publist:
                 with open("../_talks/" + md_filename, 'w') as f:
                     f.write(md)
                 with open("../files/individualBib/" + bib_filename, 'w') as f:
-                    f.write(seperated_raw_bibtex[bibdata.entries.order.index(bib_id)])
+                    f.write(seperated_raw_bibtex[list(bibdata.entries.keys()).index(bib_id)])
                 
             print(f'SUCESSFULLY PARSED {bib_id}: \"', b["title"][:60],"..."*(len(b['title'])>60),"\"")
         # field may not exist for a reference
