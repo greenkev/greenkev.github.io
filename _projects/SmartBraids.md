@@ -2,6 +2,7 @@
 title: "Smart Braids"
 excerpt: "Project at Michigan during undergrad that created contraction sensing air muscles by measuring inductance of the fibers<br/><img src='/images/smartBraid500.png'>"
 collection: portfolio
+date: 2016-06-12 00:00:00
 ---
 
 Early in undergrad I joined David Remy’s RAMLab as a research assistant where I initially worked with Wyatt Felt on his smart braid project. The core concept of smart braids is to take a pneumatic artificial muscle (also known as a McKibben air muscle) and use conductive wire as the fiber. This is to enable contraction sensing by measuring the change in the induction of the helical coils.

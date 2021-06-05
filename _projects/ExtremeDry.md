@@ -2,6 +2,7 @@
 title: "Extreme Dry"
 excerpt: "Project at Whirlpool aiming at eliminating puddling of water on items in the top rack of dishwashers.<br/><img src='/images/extremeDryPreview.png'>"
 collection: portfolio
+date: 2014-09-01 00:00:00
 ---
 
 The summer following my freshman year of undergrad I had a summer internship experience at Whirlpool. In this internship I worked on advanced development of dry systems for dishwashers  under the supervision of Alvaro Vallejo. In particular, my project focused on the problem of top rack puddling. 

@@ -2,6 +2,7 @@
 title: "A Legged Robot Recovery System"
 excerpt: "Project to design an active assist and recovery system for a planar bipedal robot. <br/><img src='/images/ramonePreview.jpg'>"
 collection: portfolio
+date: 2016-07-01 00:00:00
 ---
 
 This work aimed to create a vertical support system for the robot RAMone which was [presented at AIM 2016](https://ieeexplore.ieee.org/document/7576893). The system working is shown in the video below.
