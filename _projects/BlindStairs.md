@@ -1,6 +1,6 @@
 ---
 title: "Blind Stair Traversal via Reinforcement Learning"
-excerpt: "Research Project lead by [Jonah Seikmann](https://twitter.com/JonahSiekmann) to train reactive control policies to scale staircases without perception.<br/><img src='/images/BlindStairsPreview.jpg'>"
+excerpt: "Research Project lead by [Jonah Siekmann](https://twitter.com/JonahSiekmann) to train reactive control policies to scale staircases without perception.<br/><img src='/images/BlindStairsPreview.jpg'>"
 collection: portfolio
 date: 2021-05-01 00:00:00
 ---
