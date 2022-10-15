@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 I am a roboticist who is fascinated by planning and control for agile legged robots.
-Professionally, I work as a software engineer at [Agility Robotics](https://agilityrobotics.com/) working on locomotion motion planning for the Digit robot.
+Professionally, I work as a software engineer at [Agility Robotics](https://agilityrobotics.com/) on locomotion motion planning for the Digit robot.
 
 I earned my Robotics PhD at Oregon State University, advised by [Dr. Jonathan Hurst](https://mime.oregonstate.edu/people/hurst) and [Dr. Ross L. Hatton](http://www.rosslhatton.com/). 
 At Oregon state I was a member of the [Dynamic Robotics Lab](https://mime.oregonstate.edu/research/drl/) where I studied modeling, control and motion planning as applied to legged robots. 
