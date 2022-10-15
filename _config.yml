@@ -82,13 +82,12 @@ analytics:
 author:
   name             : "Kevin Green"
   avatar           : "profile.jpg"
-  bio              : "PhD Student in Robotics at Oregon State University"
+  bio              : "PhD Roboticist focusing on Bipedal Motion Planning"
   location         : "Corvallis, OR"
-  employer         :
+  employer         : "Agility Robotics"
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=a_heBrkAAAAJ&hl=en"
   email            :
-  researchgate     : "https://www.researchgate.net/profile/Kevin_Green14"
   uri              :
   bitbucket        :
   codepen          :
@@ -102,7 +101,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "kevinjaygreen/"
   orcid            : "https://orcid.org/0000-0003-3922-4426"
   pinterest        :
   soundcloud       :

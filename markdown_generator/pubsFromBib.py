@@ -62,6 +62,13 @@ publist = {
         "collection" : {"name":"publications",
                         "permalink":"/publication/"}
     },
+    "phdthesis":{
+        "file": "KevinGreenPapers.bib",
+        "venuekey" : "school",
+        "venue-pretext" : "",
+        "collection" : {"name":"publications",
+                        "permalink":"/publication/"}
+    },
     "misc":{
         "file": "KevinGreenPapers.bib",
         "venuekey" : "bookTitle",
