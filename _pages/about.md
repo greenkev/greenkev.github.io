@@ -8,9 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student in Robotics at Oregon State University, advised by [Dr. Jonathan Hurst](https://mime.oregonstate.edu/people/hurst) and [Dr. Ross L. Hatton](http://www.rosslhatton.com/). 
-I am a member of the [Dynamic Robotics Lab](https://mime.oregonstate.edu/research/drl/) where I study modeling, control and motion planning as applied to legged robots. My research generally focuses on robust and agile bipedal locomotion, particularly applied to Agility Robotics' Cassie Robot.
-I am currently working on methods that combine the power of deep learning, observed principles of legged locomotion from biologists and knowledge of the physics of locomotion.
+I am a roboticist who is fascinated by planning and control for agile legged robots.
+Professionally, I work as a software engineer at [Agility Robotics](https://agilityrobotics.com/) working on locomotion motion planning for the Digit robot.
+
+I earned my Robotics PhD at Oregon State University, advised by [Dr. Jonathan Hurst](https://mime.oregonstate.edu/people/hurst) and [Dr. Ross L. Hatton](http://www.rosslhatton.com/). 
+At Oregon state I was a member of the [Dynamic Robotics Lab](https://mime.oregonstate.edu/research/drl/) where I studied modeling, control and motion planning as applied to legged robots. 
+My research generally focused on methods to combine the power of deep learning, observed principles of legged locomotion from biologists and knowledge of the physics of locomotion.
 
 During my undergrad I worked as a research assistant in [Dr. C. David Remy's](https://www.uni-stuttgart.de/en/press/experts/Prof.-Dr.-C.-David-Remy) RAMlab (Robotics and Motion Laboratory) where I worked with RAMone, a series elastic planar biped designed to study efficient locomotion.
 
