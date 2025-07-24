@@ -191,10 +191,13 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  projects:
+  professional_projects:
     output: true
     permalink: /:collection/:path/
   talks:
+    output: true
+    permalink: /:collection/:path/
+  personal_projects:
     output: true
     permalink: /:collection/:path/
 

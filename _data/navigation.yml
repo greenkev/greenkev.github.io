@@ -9,8 +9,11 @@ main:
   # - title: "Teaching"
   #   url: /teaching/    
     
-  - title: "Projects"
-    url: /projects/
+  - title: "Professional Projects"
+    url: /professional_projects/
+    
+  - title: "Personal Projects"
+    url: /personal_projects/
     
   - title: "CV"
     url: /cv/
