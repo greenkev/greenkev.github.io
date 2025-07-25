@@ -24,7 +24,7 @@ A hickory shop stool. I specifically designed this with 3 legs so that on my une
 <img src='/images/miscStool.jpg'>
 
 One day I came across some of Muybridge's "Animal Locomotion" scans on a public domain database and was reminded of some of my literature reviews during grad school. 
-I thought it would be a really nice piece of wall art for my home office to have a trio of plantigrade running, digitigrade running, and quadruped galloping. So I dug through the versions I could find, did some minor edits for arragement and exposure, and got them printed. 
+I thought it would be a really nice piece of wall art for my home office to have a trio of plantigrade running, digitigrade running, and quadruped galloping. So I dug through the versions I could find, did some minor edits for arrangement and exposure, and got them printed. 
 I then made a set of mortise and tenon picture frames for them.
 <img src='/images/miscMuybridge.jpg'>
 
