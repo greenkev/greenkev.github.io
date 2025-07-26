@@ -9,6 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-<embed src="/files/pdf/KevinGreenCV.pdf" type="application/pdf" />
+<embed src="/files/pdf/KevinGreenCVShort.pdf" type="application/pdf" />
 
-[Link to CV PDF](/files/pdf/KevinGreenCV.pdf).
+[Link to CV PDF](/files/pdf/KevinGreenCVShort.pdf).
