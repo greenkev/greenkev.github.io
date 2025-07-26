@@ -231,7 +231,7 @@ for pubsource in publist:
             # else:
             #     md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
 
-            with open("../_publications/" + md_filename, 'w') as f:
+            with open("../_publications/" + md_filename, 'w', encoding="utf-8") as f:
                 f.write(md)
             with open("../files/individualBib/" + bib_filename, 'w') as f:
                 f.write(seperated_raw_bibtex[list(bibdata.entries.keys()).index(bib_id)])

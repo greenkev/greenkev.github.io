@@ -7,5 +7,6 @@ venue: '2022 IEEE/RSJ International Conference on Intelligent Robots and Systems
 citation: ' <b>Kevin Green</b>,  John Warila,  Ross L Hatton,  Jonathan Hurst, &quot;Motion Planning for Agile Legged Locomotion using Failure Margin Constraints.&quot; 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2022.'
 publication_type: 'inproceedings'
 preprint: 'https://arxiv.org/abs/2203.15107'
+paperurl: 'https://ieeexplore.ieee.org/document/9981903'
 bib_file_name: '2022-10-01-Motion-Planning-for-Agile-Legged-Locomotion-using-Failure-Margin-Constraints.bib'
 ---
