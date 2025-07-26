@@ -16,13 +16,14 @@ I iterated on this design in CAD and ended up at the design shown below.
 Beyond the basic scale changes I decided to increase the number of slats from 3 to 5, keeping with the odd count.
 I wanted to make the bottom stretcher/shelf more of a feature so I decided to change from a blind tenon to a through tenon.
 
-<img src='/images/CoffeeTableCAD.jpg'>
+<img src='/images/CoffeeTableCAD.png'>
 
 The other big feature I wanted was to have a lift top to make it more useful as a impromptu desk and give me a space to store remotes, coasters, video game controllers, ect.
 This turned out to be a big challenge because while there are plenty of easily sourceable lift mechanisms, they required a significant amount of vertical space to operate.
 I really didn't like the look of the table if the top apron section became any thicker so I actually stole 1/2" from the bottom of the tabletop by routing a pocket for the mechanism to be slightly inset. 
 I'm very happy with the final proportions.
-Here is a link to my shop drawings. The pocket isn't marked but was necessary with my lift mechanism.
+[Here is a link to my shop drawings.](/files/pdf/MissionCoffeeTable.pdf).
+The pocket isn't marked but was necessary with my lift mechanism.
 
 <img src='/images/CoffeeTable2.jpg'>
 

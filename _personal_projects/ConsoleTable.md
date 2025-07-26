@@ -13,9 +13,9 @@ I found the angles and clean lines of the mid-century modern style to be very ap
 To that end, I went through a few iterations of the design in my "Maker" copy of Solidworks until I found proportions that I really liked.
 Unfortunately that resulted in some pretty whacky measurements and angles in the end.
 I am sure that it wouldn't have been hard to make some of the number round, but that wasn't a big worry for me.
-Here is a link to my shop drawings.
+[Here is a link to my shop drawings.](/files/pdf/ConsoleTable.pdf).
 
-<img src='/images/ConsoleTableCAD.jpg'>
+<img src='/images/ConsoleTableCAD.png'>
 
 I wanted to experiment with a different domestic species of hardwood, so I went with cherry.
 It was cheap and really easy to work with, particularly with hand tools. 

@@ -1,6 +1,6 @@
 ---
 title: "Cassie 100m Dash"
-excerpt: "As a research lab, we set the Guinness World Record for the fastest 100 meter dash by a Bipedal Robot <br/><img src='/images/BlindStairsPreview.jpg'>"
+excerpt: "As a research lab, we set the Guinness World Record for the fastest 100 meter dash by a Bipedal Robot <br/><img src='/images/100mDash.jpg' width='60%'>"
 collection: portfolio
 date: 2022-05-11 00:00:00
 ---
@@ -17,3 +17,9 @@ We actually created a new record for this category which has some interesting ru
 This might feel excessive compared to the minimal rules of just running across a line, but this is necessary to ensure that the record covers truly versatile bipedal robots.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QvfK6f_8iGE?si=laWK4Ph7WNZUxa66" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+One thing that this project really highlighted to me was how tough Cassie is, and how important that is. The fall below happened on an attempt right before the record attempt.
+Cassie simply needed to be picked up and reenabled and it worked just fine.
+Now I'm not saying it's indestructible, believe me we broke that robot in just about every what imaginable.
+
+<img src='/images/100mDashFall.jpg' width='70%'>
